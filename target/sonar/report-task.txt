@@ -1,7 +1,7 @@
-organization=nawarorga
-projectKey=n-project1
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.27440
-dashboardUrl=https://sonarcloud.io/dashboard?id=n-project1
-ceTaskId=AX9zByRJn9xG16SWdW3i
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX9zByRJn9xG16SWdW3i
+organization=default-organization
+projectKey=test1
+serverUrl=https://pr-3751-core.sc-dev.io
+serverVersion=8.0.0.30018
+dashboardUrl=https://pr-3751-core.sc-dev.io/dashboard?id=test1
+ceTaskId=AYHJMKUTa-dDsT6tuqtm
+ceTaskUrl=https://pr-3751-core.sc-dev.io/api/ce/task?id=AYHJMKUTa-dDsT6tuqtm
