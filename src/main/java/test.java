@@ -6,6 +6,8 @@ public class test {
 public int val;
 public boolean TestMethod(int x) {
 
+  int nonused;
+
   String password = "ABCD";
 
   if(x==1) return  true;
