@@ -6,7 +6,7 @@ public class test {
 public int val;
 public boolean TestMethod(int x) {
 
-  int nonused;
+  int nonused=0;
   int noused2;
 
   String password = "ABCD";
