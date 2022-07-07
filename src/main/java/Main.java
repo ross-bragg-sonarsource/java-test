@@ -14,6 +14,8 @@ public class Main {
 
   public static void main(String [] args) {
 
+    String password = "123";
+
 
     java.util.regex.Pattern.compile("(h|h|ih(((i|a|c|c|a|i|i|j|b|a|i|b|a|a|j))+h)ahbfhba|c|i)*").matcher(
       "hchcchicihcchciiicichhcichcihcchiihichiciiiihhcchi"+
@@ -22,6 +24,7 @@ public class Main {
         "chhhhiiihchihcccchhhiiiiiiiicicichicihcciciihichhhhchihciiihhiccccccciciihh"+
         "ichiccchhicchicihihccichicciihcichccihhiciccccccccichhhhihihhcchchihih"+
         "iihhihihihicichihiiiihhhhihhhchhichiicihhiiiiihchccccchichci").matches();
+
 
     test t = new test();
     t.val = 100;
