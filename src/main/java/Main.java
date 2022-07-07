@@ -37,7 +37,7 @@ public class Main {
 
 
 
-    SSLContext context = sslContext("ASAD", "DEZZS");
+    //SSLContext context = sslContext("ASAD", "DEZZS");
 
 
     System.out.println(context);
@@ -366,7 +366,7 @@ public class Main {
     Class clazz = Class.forName(name);  // Noncompliant
   }
 
-  private static SSLContext sslContext(String keystoreFile, String password)
+  /*private static SSLContext sslContext(String keystoreFile, String password)
     throws GeneralSecurityException, IOException {
     KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
     try (InputStream in = new FileInputStream(keystoreFile)) {
@@ -387,5 +387,5 @@ public class Main {
       new SecureRandom());
 
     return sslContext;
-  }
+  }*/
 }
