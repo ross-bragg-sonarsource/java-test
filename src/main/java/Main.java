@@ -1,9 +1,14 @@
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.KeyStore;
 import java.security.NoSuchAlgorithmException;
 import java.security.Principal;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -15,7 +20,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collector;
+import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManagerFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.Cookie;
@@ -26,11 +33,12 @@ import static java.util.Collections.singletonList;
 
 public class Main {
 
-  public static void main(String [] args) throws IOException, InterruptedException, NoSuchAlgorithmException, ClassNotFoundException {
+  public static void main(String [] args) throws IOException, InterruptedException, GeneralSecurityException, ClassNotFoundException {
 
 
 
-    SSLContext context = SSLContext.getInstance("TLSv1.1");
+    SSLContext context = sslContext("ASAD", "DEZZS");
+
 
     System.out.println(context);
 
@@ -356,5 +364,28 @@ public class Main {
   public static void run(javax.servlet.http.HttpServletRequest request) throws ClassNotFoundException {
     String name = request.getParameter("name");
     Class clazz = Class.forName(name);  // Noncompliant
+  }
+
+  private static SSLContext sslContext(String keystoreFile, String password)
+    throws GeneralSecurityException, IOException {
+    KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
+    try (InputStream in = new FileInputStream(keystoreFile)) {
+      keystore.load(in, password.toCharArray());
+    }
+    KeyManagerFactory keyManagerFactory =
+      KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+    keyManagerFactory.init(keystore, password.toCharArray());
+
+    TrustManagerFactory trustManagerFactory =
+      TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+    trustManagerFactory.init(keystore);
+
+    SSLContext sslContext = SSLContext.getInstance("TLSv1.1");
+    sslContext.init(
+      keyManagerFactory.getKeyManagers(),
+      trustManagerFactory.getTrustManagers(),
+      new SecureRandom());
+
+    return sslContext;
   }
 }
