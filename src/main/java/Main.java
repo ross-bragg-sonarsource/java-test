@@ -2,6 +2,7 @@ import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,6 +15,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collector;
+import javax.net.ssl.SSLContext;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.Cookie;
@@ -24,7 +26,12 @@ import static java.util.Collections.singletonList;
 
 public class Main {
 
-  public static void main(String [] args) throws IOException, InterruptedException {
+  public static void main(String [] args) throws IOException, InterruptedException, NoSuchAlgorithmException {
+
+
+    SSLContext context = SSLContext.getInstance("TLSv1.1");
+
+    System.out.println(context);
 
     HttpServletRequest req = new HttpServletRequest() {
       @Override
