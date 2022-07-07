@@ -1,4 +1,5 @@
 import com.google.gson.GsonBuilder;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -7,12 +8,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collector;
+import javax.servlet.http.HttpServletRequest;
 
 import static java.util.Collections.singletonList;
 
 public class Main {
 
   public static void main(String [] args) {
+
 
     String password = "123";
 
@@ -46,6 +49,13 @@ public class Main {
     System.out.println(String.format("koko %s %s",new Date(), System.currentTimeMillis()));
     System.out.println(String.format("dd %s",System.currentTimeMillis()));
     System.out.println("done");
+  }
+
+  public static void test(HttpServletRequest req) throws IOException, InterruptedException {
+    Long time = Long.parseLong(req.getParameter("time"));
+    Thread.sleep(Math.min(time, 1000));
+    // ...) {
+
   }
   public static boolean check(Long duration) {
     return (duration == null || duration >= 0);
