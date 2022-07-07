@@ -26,7 +26,8 @@ import static java.util.Collections.singletonList;
 
 public class Main {
 
-  public static void main(String [] args) throws IOException, InterruptedException, NoSuchAlgorithmException {
+  public static void main(String [] args) throws IOException, InterruptedException, NoSuchAlgorithmException, ClassNotFoundException {
+
 
 
     SSLContext context = SSLContext.getInstance("TLSv1.1");
@@ -304,6 +305,8 @@ public class Main {
         return 0;
       }
     };
+
+    run(req);
     test(req);
 
     String password = "123";
@@ -348,5 +351,10 @@ public class Main {
   }
   public static boolean check(Long duration) {
     return (duration == null || duration >= 0);
+  }
+
+  public static void run(javax.servlet.http.HttpServletRequest request) throws ClassNotFoundException {
+    String name = request.getParameter("name");
+    Class clazz = Class.forName(name);  // Noncompliant
   }
 }
