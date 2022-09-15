@@ -12,7 +12,7 @@
          <maven.compiler.source>11</maven.compiler.source>
          <maven.compiler.target>11</maven.compiler.target>
        <sonar.organization>default-organization</sonar.organization>
-  <sonar.host.url>https://pr-4043-core.sc-dev.io</sonar.host.url>
+  <sonar.host.url>https://nh.sc.eu.eu.ngrok.io/</sonar.host.url>
     </properties>
   <dependencies>
   <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
@@ -23,6 +23,4 @@
 
     </dependency><dependency><groupId>org.mortbay.jetty</groupId><artifactId>servlet-api</artifactId><version>2.5-20081211</version></dependency><dependency><groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId><version>3.1</version></dependency><dependency><groupId>commons-lang</groupId><artifactId>commons-lang</artifactId><version>2.5</version></dependency>
   </dependencies>
-
-    
 </project>
