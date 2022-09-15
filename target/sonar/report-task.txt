@@ -1,7 +1,8 @@
 organization=default-organization
-projectKey=test1
-serverUrl=https://pr-3751-core.sc-dev.io
-serverVersion=8.0.0.30018
-dashboardUrl=https://pr-3751-core.sc-dev.io/dashboard?id=test1
-ceTaskId=AYHJMKUTa-dDsT6tuqtm
-ceTaskUrl=https://pr-3751-core.sc-dev.io/api/ce/task?id=AYHJMKUTa-dDsT6tuqtm
+projectKey=java-test
+serverUrl=https://pr-4043-core.sc-dev.io
+serverVersion=8.0.0.31940
+branch=branch1
+dashboardUrl=https://pr-4043-core.sc-dev.io/dashboard?id=java-test&branch=branch1&resolved=false
+ceTaskId=AYM3WwUs5twMsIl91NSU
+ceTaskUrl=https://pr-4043-core.sc-dev.io/api/ce/task?id=AYM3WwUs5twMsIl91NSU

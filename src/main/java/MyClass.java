@@ -4,6 +4,6 @@ public class MyClass {
   public Object clone() { // Noncompliant
     //...
 
-    return null;
+    return new Object();
   }
 }
