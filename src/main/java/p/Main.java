@@ -1,3 +1,5 @@
+package p;
+
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -329,8 +331,6 @@ public class Main {
         "iihhihihihicichihiiiihhhhihhhchhichiicihhiiiiihchccccchichci").matches();
 
 
-    test t = new test();
-    t.val = 100;
 
     List<Integer> i = new LinkedList<>();
     i.add(1);

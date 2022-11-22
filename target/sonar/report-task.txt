@@ -1,8 +1,7 @@
-organization=default-organization
-projectKey=java-test
-serverUrl=https://pr-4043-core.sc-dev.io
-serverVersion=8.0.0.31940
-branch=branch1
-dashboardUrl=https://pr-4043-core.sc-dev.io/dashboard?id=java-test&branch=branch1&resolved=false
-ceTaskId=AYM3WwUs5twMsIl91NSU
-ceTaskUrl=https://pr-4043-core.sc-dev.io/api/ce/task?id=AYM3WwUs5twMsIl91NSU
+organization=nawarorga
+projectKey=ttt3
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.34856
+dashboardUrl=https://sonarcloud.io/dashboard?id=ttt3
+ceTaskId=AYSfidBij6cCnB66Trvr
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYSfidBij6cCnB66Trvr
