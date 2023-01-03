@@ -1,5 +1,3 @@
-package p;
-
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
