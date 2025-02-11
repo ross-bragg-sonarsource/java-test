@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-         <maven.compiler.source>11</maven.compiler.source>
-         <maven.compiler.target>11</maven.compiler.target>
-      <sonar.organization>nawarorga</sonar.organization>
+         <maven.compiler.source>17</maven.compiler.source>
+         <maven.compiler.target>17</maven.compiler.target>
+      <sonar.organization>ross-test-org</sonar.organization>
   <sonar.host.url>https://dev13.sc-dev13.io</sonar.host.url>
     </properties>
   <dependencies>
