@@ -5,7 +5,7 @@ jobs:
     runs-on:
       - codebuild-RossGhRunnerPoc-${{ github.run_id }}-${{ github.run_attempt }}
       - instance-size:small
-      - image:custom-501215020883.dkr.ecr.eu-central-1.amazonaws.com/gha-runner/ross-poc:base-image
+      - image:linux-5.0
     steps:
       - run: mvn --version
       - run: echo "Hello World!"
