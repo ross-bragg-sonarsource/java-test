@@ -8,7 +8,7 @@ public class Main4 {
   public static void main(String [] args) {
 
 
-    Matcher matcher = EMAIL_PATTERN.matcher("author-mail koko");
+    Matcher matcher = EMAIL_PATTERN.matcher("author-mail kokomo komo komo komo");
     if (!matcher.find(AUTHOR_EMAIL.length()) || matcher.groupCount() != 1) {
       throw new IllegalStateException("Couldn't parse author email from: ");
     }
