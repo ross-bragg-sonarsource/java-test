@@ -1,5 +1,6 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class Main4 {
   private static final Pattern EMAIL_PATTERN = Pattern.compile("<(\\S*?)>");
